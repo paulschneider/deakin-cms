@@ -1,0 +1,215 @@
+
+// CK EDITOR
+.attachment.cke_widget_element {
+    display: inline-block;
+    .editor { display: inline-block; }
+}
+
+// CAPTIONS.
+span.figure.attachment-content {
+    margin: 0;
+    border: solid 1px #ccc;
+    display: inline-block;
+    background: rgba(0,0,0,0.05);
+
+    img {
+        display: inline-block;
+        padding: 0;
+        margin: 0;
+    }
+
+    span.figcaption {
+        display: inline-block;
+        position: absolute;
+        bottom: 1px;
+        left: 1px;
+        right: 1px;
+        text-align: center;
+        background: rgba(255,255,255,0.65);
+        font-size: 13px;
+    }
+
+    &.pull-left, &.pull-right {
+        float: none !important;
+    }
+}
+
+
+// Frontend
+figure.attachment-content {
+    margin: 0;
+    display: inline-block;    
+
+    img {
+        display: inline-block;
+        padding: 0;
+        margin: 0;
+    }
+
+    figcaption {
+        display: inline-block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        text-align: center;
+        background: rgba(255,255,255,0.65);
+        font-size: 13px;
+    }
+}
+
+a.attachment-content, a.attachment-content:visited {
+    position: relative;
+    // line-height: 18px;
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 35px;
+    vertical-align: middle;
+    text-align: inherit;
+
+    span {
+        line-height: 18px;
+        display: inline-block;
+        text-align: left;
+    }
+}
+
+.attachment-content[href]:before {
+    content: url(../../images/icons/Generic-blue.svg);
+    font-family: FontAwesome;
+    position: absolute;
+    left: 0;
+    width: 25px;
+    height: 25px;
+    top: 50%;
+    margin-top: -14px;
+    stroke: #ffffff;
+}
+
+.has-arrow .attachment-content {
+    padding-left: 50px;
+}
+
+.has-arrow .attachment-content[href]:before {
+    width: 40px;
+    height: 40px;
+    margin-top: -21px;
+}
+
+.attachment-content[href$='.pdf']:before {
+    content: url(../../images/icons/PDF-blue.svg);
+}
+
+.attachment-content[href$='.doc']:before,
+.attachment-content[href$='.docx']:before {
+    content: url(../../images/icons/Doc-blue.svg);
+}
+
+.attachment-content[href$='.html']:before,
+.attachment-content[href$='.htm']:before {
+    content: url(../../images/icons/HTML-blue.svg);
+}
+
+.attachment-content[href$='.jpg']:before,
+.attachment-content[href$='.jpeg']:before,
+.attachment-content[href$='.gif']:before,
+.attachment-content[href$='.psd']:before,
+.attachment-content[href$='.png']:before,
+.attachment-content[href$='.bmp']:before {
+    content: url(../../images/icons/IMG-blue.svg);
+}
+
+.attachment-content[href$='.ppt']:before,
+.attachment-content[href$='.pptx']:before {
+    content: url(../../images/icons/PPT-blue.svg);
+}
+
+.attachment-content[href$='.xls']:before,
+.attachment-content[href$='.csv']:before,
+.attachment-content[href$='.xlsx']:before {
+    content: url(../../images/icons/XLS-blue.svg);
+}
+
+.attachment-content[href$='.zip']:before,
+.attachment-content[href$='.rar']:before {
+    content: url(../../images/icons/Zip-blue.svg);
+}
+
+/* For colored containers */
+.red, .blue, .purple, .blue {
+    .attachment-content[href]:before {
+        content: url(../../images/icons/Generic-white.svg);
+    }
+
+    .attachment-content[href$='.pdf']:before {
+        content: url(../../images/icons/PDF-white.svg);
+    }
+
+    .attachment-content[href$='.doc']:before,
+    .attachment-content[href$='.docx']:before {
+        content: url(../../images/icons/Doc-white.svg);
+    }
+
+    .attachment-content[href$='.html']:before,
+    .attachment-content[href$='.htm']:before {
+        content: url(../../images/icons/HTML-white.svg);
+    }
+
+    .attachment-content[href$='.jpg']:before,
+    .attachment-content[href$='.jpeg']:before,
+    .attachment-content[href$='.gif']:before,
+    .attachment-content[href$='.psd']:before,
+    .attachment-content[href$='.png']:before,
+    .attachment-content[href$='.bmp']:before {
+        content: url(../../images/icons/IMG-white.svg);
+    }
+
+    .attachment-content[href$='.ppt']:before,
+    .attachment-content[href$='.pptx']:before {
+        content: url(../../images/icons/PPT-white.svg);
+    }
+
+    .attachment-content[href$='.xls']:before,
+    .attachment-content[href$='.csv']:before,
+    .attachment-content[href$='.xlsx']:before {
+        content: url(../../images/icons/XLS-white.svg);
+    }
+
+    .attachment-content[href$='.zip']:before,
+    .attachment-content[href$='.rar']:before {
+        content: url(../../images/icons/Zip-white.svg);
+    }
+}
+
+/* Attachemnt center */
+.attachment-content {
+    img {
+        display: inline-block;
+    }
+    &.center {
+        text-align: center;
+    }
+}
+
+/* Large images */
+.main-wrapper {
+    .one-column-wysiwyg figure.full-width,
+    .one-column-centered-wysiwyg figure.full-width {
+        width: 200%;
+        margin-left: -50%;
+        max-width: none;
+    }
+}
+
+@media (max-width: $screen-sm-max) {
+    .one-column-wysiwyg figure.full-width,
+    .one-column-centered-wysiwyg figure.full-width {
+        margin-left: 0;
+        width: 100%;
+    }
+}
+
+.section-advisory-board figure.attachment-content {
+    padding-right: 15px;
+}

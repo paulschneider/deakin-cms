@@ -1,0 +1,56 @@
+// Color Classes
+.color-legacy {
+  color: $color-legacy;
+  @include svg-color($color-legacy);
+}
+
+.color-progressive {
+  color: $color-progressive;
+  @include svg-color($color-progressive);
+}
+
+.color-credible {
+  color: $color-credible;
+  @include svg-color($color-credible);
+}
+
+.color-confident {
+  color: $color-confident;
+  @include svg-color($color-confident);
+}
+
+.color-professional {
+  color: $color-professional;
+  @include svg-color($color-professional);
+}
+
+.color-empowering {
+  color: $color-empowering;
+  @include svg-color($color-empowering);
+}
+
+.color-passionate {
+  color: $color-passionate;
+  @include svg-color($color-passionate);
+}
+
+.color-dynamic {
+  color: $color-dynamic;
+  @include svg-color($color-dynamic);
+}
+
+.color-inspired {
+  color: $color-inspired;
+  @include svg-color($color-inspired);
+}
+
+.color-pale-pink {
+  color: $color-pale-pink;
+  @include svg-color($color-pale-pink);
+}
+
+.color-white {
+  color: #fff;
+  @include svg-color(#fff);
+}
+

@@ -1,0 +1,14 @@
+.related-links {
+    .svg-icon {
+        display: inline-block;
+        margin: 0 5px 0 0;
+        width: $line-height-computed;
+        height: $line-height-computed;
+        overflow: hidden;
+
+        svg * {
+            fill: $color-blue;
+            stroke: $color-blue;
+        }
+    }
+}

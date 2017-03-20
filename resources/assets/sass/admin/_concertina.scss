@@ -1,0 +1,7 @@
+/* Style fixes for concertinas in the backend so it doesn't take so much space */
+.concertina .detail {
+    .col-md-6 {
+        width: 100%;
+        margin-left: 0;
+    }
+}

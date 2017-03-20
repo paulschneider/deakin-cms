@@ -1,0 +1,43 @@
+div.social {
+  margin-top: 10px;
+  margin-bottom: 25px;
+  > a {
+    cursor: pointer;
+    padding: 20px;
+    font-size: 0;
+    color: black;
+    &:after {
+      @include font-awesome();
+      font-size: 25px;
+    }
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+  .facebook-share-btn:after {
+    content: "\f09a";
+  }
+  .twitter-share-btn:after {
+    content: "\f099";
+  }
+  .linkedin-share-btn:after {
+    content: "\f0e1";
+  }
+  .email-share-btn:after {
+    content: "\f0e0";
+  }
+}
+
+.share-header {
+  font-size: 12px;
+  letter-spacing: 2px;
+  font-weight: bold;
+  color: black;
+  margin-top: 40px;
+  text-transform: uppercase;
+}
+
+.social-wrapper {
+  padding-top: 10px;
+  font-family: Helvetica, Arial, sans-serif;
+}

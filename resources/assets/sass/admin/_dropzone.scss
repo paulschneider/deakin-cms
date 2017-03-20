@@ -1,0 +1,109 @@
+.embedded-dropzone {
+  min-height: 45px;
+  background-color: #eee;
+  padding: 10px;
+  position: relative;
+  cursor: pointer;
+  border-radius: 2px;
+  &.dz-drag-hover {
+    background-color: #ccc;
+    &:before {
+      display: block;
+      width: 55px;
+      position: absolute;
+      content: "-";
+      left: 50%;
+      margin-left: -30px;
+      top: 5px;
+      font-family: 'FontAwesome';
+      font-style: normal;
+      font-weight: 400;
+      color: #000;
+      font-size: 30px;
+      text-align: center;
+      color: #ccc;
+      content: "\f0ee"; // Refresh
+      color: #fff;
+    }
+  }
+  .filename,
+  .filesize,
+  .progress-wrap {
+    @media (min-width: 768px) {
+      padding-top: 10px;
+    }
+  }
+  .progress {
+    margin-bottom: 0;
+  }
+  .dz-details {
+    border-bottom: 1px solid #fff;
+    color: #333;
+    &:last-child {
+      border-bottom: none;
+    }
+    > div {
+      overflow-x: hidden;
+      @media (min-width: 768px) {
+        min-height: 35px;
+      }
+    }
+  }
+}
+
+.dropzone-fullscreen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  display: none;
+  pointer-events: none;
+  z-index: 10000;
+  &:before {
+    display: block;
+    position: relative;
+    top: 40%;
+    left: 49%;
+    z-index: 10001;
+    font-family: 'FontAwesome';
+    font-style: normal;
+    font-weight: 400;
+    color: #000;
+    font-size: 50px;
+    content: "\f0ee"; // Refresh
+  }
+  .dz-drag-hover & {
+    display: block;
+  }
+  .dz-started & {
+    display: block;
+    &:before {
+      content: "\f021"; // Refresh
+    }
+  }
+  .dz-complete & {
+    display: block;
+    &:before {
+      content: "\f087"; // Tick
+    }
+  }
+  .dz-error & {
+    display: block;
+    &:before {
+      content: "\f088"; // X
+    }
+  }
+}
+
+// Style the body hover
+body.dz-started {}
+
+#file-listing.files-loading {
+  opacity: 0.2;
+  pointer-events: none;
+}
+

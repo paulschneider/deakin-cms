@@ -1,0 +1,121 @@
+.team{
+    margin-bottom: $padding-half;
+    >h2{
+        margin: 15px 0 35px;
+        color: $subHeadings;
+        font-size: 40px;
+    }
+    p{
+        margin-bottom: 30px;
+    }
+    .item{
+        min-height: 136px;
+        position: relative;
+        background-color: $color-background-grey;
+        margin: 0 0 2px;
+        padding: 45px 74px 18px 190px;
+        cursor: pointer;
+        i{
+            position: absolute;
+            top: 52px;
+            right: 28px;
+            height: 30px;
+            font-size: 40px;
+        }
+        .imgWrap{
+            @include transition($speed: 500ms);
+            position: absolute;
+            top: 18px;
+            left: 40px;
+            width: 100px;
+            height: 100px;
+            overflow: hidden;
+
+            img{
+                min-width: 100%;
+                min-height: 100%;
+                margin: 0 auto;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: -9999px;
+                right: -9999px;
+            }
+        }
+        h3{
+            margin: 0 0 3px;
+            font-size: 21px;
+            text-transform: uppercase;
+        }
+        h4{
+            font-size: 14px;
+            text-transform: none;
+            margin: 0 0 20px;
+            letter-spacing: 0.5px;
+        }
+        .content{
+            display: none;
+        }
+    }
+    .item.open{
+        .imgWrap{
+            @include transition($speed: 500ms);
+            width: 120px;
+            height: 150px;
+            left: 30px;
+
+            img{
+                min-height: 100%;
+                min-width: 100%;
+            }
+        }
+    }
+
+    @media (max-width: 767px) {
+        .item{
+            padding-left: 132px;
+            padding-right: 44px;
+            i{
+                right: 16px;
+                font-size: 30px;
+            }
+            .imgWrap{
+                left: 16px;
+            }
+            .content{
+                width: 126%;
+                position: relative;
+                left: -116px;
+                top: 30px;
+            }
+        }
+        .item.open{
+            .imgWrap{
+                width: 100px;
+                height: 100px;
+                left: 16px;
+            }
+        }
+    }
+    @media (max-width: 590px) {
+        .item{
+            .content{
+                width: 140%;
+            }
+        }
+    }
+    @media (max-width: 454px) {
+        .item{
+            .content{
+                width: 164%;
+            }
+        }
+    }
+    @media (max-width: 400px) {
+        .item{
+            .content{
+                width: 325px;
+            }
+        }
+    }
+}

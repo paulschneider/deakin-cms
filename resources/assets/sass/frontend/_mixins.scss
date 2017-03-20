@@ -1,0 +1,149 @@
+@function str-replace($string, $search, $replace: "") {
+  $index: str-index($string, $search);
+  @if $index {
+    @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+  }
+  @return $string;
+}
+
+@mixin font-face($name, $path, $weight: null, $style: null, $exts: eot woff2 woff ttf svg) {
+  $src: null;
+  $extmods: ( eot: "?", svg: "#" + str-replace($name, " ", "_"));
+  $formats: ( otf: "opentype", ttf: "truetype");
+  @each $ext in $exts {
+    $extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
+    $format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
+    $src: append($src, url(quote($path + "." + $extmod)) format(quote($format)), comma);
+  }
+  @font-face {
+    font-family: quote($name);
+    font-style: $style;
+    font-weight: $weight;
+    src: $src;
+  }
+}
+
+@mixin svg-color($color: #fff) {
+  .svg-icon * {
+    stroke: $color;
+    fill: $color;
+  }
+  .svg-icon .fill * {
+    fill: $color;
+  }
+}
+
+@mixin video-theme-color-transition($color) {
+  background-color: $color;
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    @include video-hover-overlay();
+  }
+}
+
+@mixin video-theme-cloud-transition($background) {
+  background-image: $background;
+  background-size: cover;
+  &:hover {
+    @include video-hover-overlay();
+  }
+}
+
+@mixin video-hover-overlay($background-color: black, $opacity: 0.4) {
+  .overlay {
+    transition: background-color 0.3s ease-in-out;
+    background-color: $background-color;
+    opacity: $opacity;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+  }
+}
+
+@mixin swatch($height: 22px,
+$margin: 2px) {
+  width: $height;
+  height: $height;
+  border: 1px solid $dark-gray;
+  margin-left: $margin;
+  opacity: 0.75;
+}
+
+@mixin capitals($color: $color-blue) {
+  text-transform: uppercase;
+  color: $color;
+}
+
+@mixin hoverable($color: $color-blue, $background: $color-light-blue) {
+  background-color: $background;
+  transition: background-color .17s ease-in-out;
+  &:hover {
+    background-color: $color-blue;
+    h3,
+    p,
+    a,
+    strong,
+    span {
+      color: white;
+    }
+  }
+}
+
+@mixin pull-out($percent: -30%) {
+  margin-left: $percent;
+  margin-right: $percent;
+}
+
+@mixin font-awesome($content: "\f09a", $size: 20px) {
+  content: $content;
+  font-family: FontAwesome;
+  font-size: $size;
+}
+
+@mixin gradient_background($start, $finish) {
+  background-color: $start;
+  /* Old browsers */
+  background: -moz-linear-gradient(45deg, $start 0%, $finish 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(45deg, $start 0%, $finish 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(45deg, $start 0%, $finish 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$start}',
+  endColorstr='#{$finish}',
+  GradientType=1);
+  /* IE6-9 fallback on horizontal gradient */
+}
+
+@mixin blue_btn($color: $color-aqua) {
+  padding: 13px 50px;
+  display: inline-block;
+  font-size: 18px;
+  //background-color: white;
+  background-color: transparent;
+  border: 2px solid $color;
+  border-radius: 3px;
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-top: 8px;
+  color: $color;
+  &:hover {
+    transition: all 0.18s ease-in-out;
+  }
+  .fa {
+    display: none;
+    margin-left: 40px;
+  }
+  @media (max-width: $screen-lg) {
+    font-size: 0.95em;
+  }
+  @media (max-width: $screen-md) {
+    font-size: 0.9em;
+  }
+}
+
+@mixin transition($property:all, $speed:200ms, $ease:ease-in-out) {
+  transition: $property $speed $ease;
+}
+

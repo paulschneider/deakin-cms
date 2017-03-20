@@ -1,0 +1,62 @@
+// base variables
+//
+// if using bootstrap-sass it's useful to just copy the vars from
+// ../../../vendor/bootstrap-sass/vendor/stylesheets/bootstrap/variables
+// into here to easilly overwrite various bootstrap settings to custom
+// Deakin Colours
+$color-legacy: #005baa;
+$color-progressive: #02835c;
+$color-credible: #3384c6;
+$color-confident: #eb4122;
+$color-professional: #1f1d1d;
+$color-empowering: #f68a1b;
+$color-passionate: #cc3634;
+$color-dynamic: #c21c81;
+$color-inspired: #5c1e5b;
+$color-pale-pink: #ffca94;
+$color-red: #dd272e;
+$color-aqua: #0099CB;
+$color-dark-blue: #1B5FB5;
+$color-blue: #3c8fce;
+$color-light-blue: #6eb3ae;
+$color-purple: #7e60ae;
+$color-background-grey: #f2f2f2;
+$color-grey: #73787B;
+$color-pale-grey: #F6F6F6;
+$color-light-grey: #f2f2f2;
+$color-lightish-grey: #E3E3E3;
+$color-mid-grey: #91999D;
+$color-darkest-grey: #1B1B1B;
+$color-charcoal: #333333;
+$color-footer-border: #3A3D3D;
+$font-body-color: #212121;
+$font-footer-color: #76705e;
+$font-link-color: $color-blue;
+$form-border-color: #BFD4DE;
+$warning-bg: #FFCCBA;
+$padding-large: 50px;
+$padding-half: $padding-large / 2;
+$menu-height: 74px;
+$video-odd-height: 450px;
+$video-even-height: 370px;
+$video-width-lg: 357px;
+$offset-lift-effect-y: 300px;
+$offset-lift-effect-x: 100px;
+// OVERWRITE SOME BOOTSTRAP
+$grid-float-breakpoint: 1125px;
+$input-border-focus: $color-blue;
+$brand-primary: $color-blue;
+$brand-success: #5cb85c !default;
+$brand-info: #5bc0de !default;
+$brand-warning: #f0ad4e !default;
+$brand-danger: #d9534f !default;
+$font-size-h1: 50px;
+$font-size-h2: 26px;
+$font-size-h3: 22px;
+$font-size-h4: 19px;
+$font-size-h5: 17px;
+
+//other element colors
+$headerSearch: #3f3f3f;
+$subHeadings: #24428f;
+$videoListBg: #0067b4;

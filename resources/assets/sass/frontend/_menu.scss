@@ -1,0 +1,256 @@
+
+// Hamburgers!
+$hamburger-types                           : (elastic, elastic-r);
+$hamburger-padding-x                       : 10px;
+$hamburger-padding-y                       : 10px;
+$hamburger-layer-width                     : 30px;
+// $hamburger-layer-height                    : 4px;
+$hamburger-layer-spacing                   : 6px;
+$hamburger-layer-color                     : #333;
+// $hamburger-layer-border-radius             : 4px;
+$hamburger-hover-opacity                   : 1;
+// $hamburger-hover-transition-duration       : 0.15s;
+// $hamburger-hover-transition-timing-function: linear;
+
+
+@import "../../vendor/css-hamburgers/_sass/hamburgers/hamburgers";
+
+
+// MMENU VARIABLES
+// "../../vendor/jQuery.mmenu/src/css/_imp/variables";
+$mm_backgroundColor             : #333;
+$mm_borderColor                 : rgba( #000, 0.15 );
+$mm_dimmedTextColor             : rgba( #fff, 0.4 );
+$mm_emphasizedBackgroundColor   : $color-blue;
+$mm_highlightedBackgroundColor  : rgba( #fff, 0.05 );
+$mm_textColor                   : #fff;
+$mm_menuMinWidth                : 140px;
+$mm_menuMaxWidth                : 340px;
+
+// Mmenu
+@import "../../vendor/jQuery.mmenu/src/css/jquery.mmenu.oncanvas";
+@import "../../vendor/jQuery.mmenu/src/addons/offcanvas/jquery.mmenu.offcanvas";
+@import "../../vendor/jQuery.mmenu/src/addons/navbars/jquery.mmenu.navbars";
+@import "../../vendor/jQuery.mmenu/src/extensions/multiline/jquery.mmenu.multiline";
+@import "../../vendor/jQuery.mmenu/src/extensions/positioning/jquery.mmenu.positioning";
+@import "../../vendor/jQuery.mmenu/src/extensions/borderstyle/jquery.mmenu.borderstyle";
+@import "../../vendor/jQuery.mmenu/src/extensions/pagedim/jquery.mmenu.pagedim";
+@import "../../vendor/jQuery.mmenu/src/extensions/effects/jquery.mmenu.effects";
+
+// I wants a gradient
+.mm-menu .mm-listview > li.mm-selected > a:not(.mm-next), .mm-menu .mm-listview > li.mm-selected > span {
+  @include gradient_background($color-legacy, $color-credible);
+}
+
+
+// Fixed elements need the class "Fixed" in the HTML.
+// This splits them out of the MMENU wrapping.
+
+$header-height: 105px;
+$header-height-mobile: 65px;
+$header-padding: 15px;
+$header-padding-mobile: 10px;
+
+$aspect-width-ratio-logo: 4.375; // * the height = width.
+
+.site-header-padding {
+  transition: height 0.4s ease-in-out, max-height 0.4s ease-in-out;
+}
+
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin-bottom: 0;
+  font-weight: 700;
+  width: 100%;
+  z-index: 100;
+  height: $header-height;
+
+  .animation-absolute {
+    position: absolute;
+    padding: $header-padding;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+  }
+  .brand{
+    float: left;
+    padding: 0;
+    text-decoration: none;
+    img {
+      margin-left: 10px;
+      height: $header-height - ($header-padding * 2);
+      width: ($header-height - ($header-padding * 2)) * $aspect-width-ratio-logo;
+      transition: height 0.4s ease-in-out, width 0.4s ease-in-out;
+    }
+  }
+
+  .hamburger {
+    float: right;
+    margin: 16px 5px 16px 0;
+  }
+
+  .hamburger:focus {
+    outline: none;
+  }
+
+  .hamburger:hover .hamburger-inner,
+  .hamburger:hover .hamburger-inner:before,
+  .hamburger:hover .hamburger-inner:after {
+    background-color: $color-blue;
+  }
+
+  .quick-links {
+    float: right;
+    margin: 27px 0;
+    padding: 0;
+    list-style-type: none;
+    @media (max-width: $screen-xs-max) {
+      display: none;
+    }
+    li {
+      float: left;
+      padding: 0;
+      margin: 0 0 0 15px;
+      list-style-type: none;
+
+      a {
+        padding: 15px 5px;
+        font-size: 14px;
+        color: black;
+        text-transform: uppercase;
+        font-weight: 500;
+        &:hover {
+          color: $color-blue;
+        }
+      }
+    }
+  }
+  .search{
+    width: 250px;
+    float: right;
+    padding: 0;
+    margin: 14px 0;
+    form{
+      position: relative;
+      .form-group{
+        margin: 0;
+      }
+      input{
+        width: 100%;
+        background: transparent;
+        background-color: rgb(217,217,217);
+        background-color: rgba(217,217,217,0.5);
+        border: 0 none;
+        border-radius: 30px;
+        font-size: 16px !important;
+        font-weight: 400 !important;
+        color: $headerSearch !important;
+        padding: 0 20px 0 46px;
+        box-shadow: none;
+      }
+      button{
+        position: absolute;
+        top: 0;
+        left: 18px;
+        background: transparent;
+        border: 0 none;
+        font-size: 0;
+        height: 44px;
+        width: 44px;
+        outline: none !important;
+        &:after{
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          font-family: FontAwesome;
+          content: '\f002';
+          color: $headerSearch;
+          font-size: 18px;
+          line-height: 44px;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+.site-header-padding {
+  height: $header-height;
+
+
+  &.shadow {
+    background: white;
+    box-shadow: 0 2px 2px rgba(0,0,0,0.1);
+  }
+}
+
+#navbar-menu {
+  .logo {
+    display: block;
+    text-align: center;
+    padding: 30px 0 0 0;
+    img {
+      max-height: 50px;
+    }
+  }
+  .mm-navbar-bottom {
+    display: none;
+  }
+}
+@media (max-width: 1330px) {
+  .site-header{
+
+    .search{
+      display: none !important;
+    }
+  }
+}
+
+@media (max-width: 1080px) {
+
+  .site-header {
+    height: $header-height-mobile;
+
+    .animation-absolute {
+      padding: $header-padding-mobile;
+    }
+    .quick-links{
+      margin: 9px 0;
+      li{
+        a{
+          font-size: 13px;
+        }
+      }
+    }
+    .hamburger {
+      transform: scale(0.8);
+      margin: -3px 0 0 0;
+    }
+
+
+    .brand img {
+      height: $header-height-mobile - ($header-padding-mobile * 2);
+      width: ($header-height-mobile - ($header-padding-mobile * 2)) * $aspect-width-ratio-logo;
+    }
+  }
+
+  .site-header-padding {
+    height: $header-height-mobile;
+  }
+}
+@media (max-width: 890px) {
+  .site-header{
+    .quick-links{
+      display: none;
+    }
+  }
+}
+
+@media (max-width: $screen-xs-max) {
+}

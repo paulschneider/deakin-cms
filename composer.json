@@ -1,0 +1,84 @@
+{
+    "name": "laravel/laravel",
+    "description": "The Laravel Framework.",
+    "keywords": [
+        "framework",
+        "laravel"
+    ],
+    "license": "MIT",
+    "type": "project",
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/milanjk/laravel-stapler"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/milanjk/stapler"
+        }
+    ],
+    "require": {
+        "laravel/framework": "5.3.*",
+        "filp/whoops": "~2.0.",
+        "laracasts/flash": "~2.0",
+        "codesleeve/stapler": "dev-iconinc-pdf-fix-AWSv3",
+        "codesleeve/laravel-stapler": "dev-iconinc-pdf-fix-AWSv3",
+        "aws/aws-sdk-php": "3.2.x",
+        "sunra/php-simple-html-dom-parser": "v1.5.0",
+        "caffeinated/menus": "~3.0",
+        "laravelcollective/html": "5.3.*",
+        "zizaco/entrust": "5.2.x-dev",
+        "mews/purifier": "~2.0",
+        "schuppo/password-strength": "~1.0",
+        "pelago/emogrifier": "@dev",
+        "yajra/laravel-datatables-oracle": "~6.0",
+        "maknz/slack": "dev-master",
+        "doctrine/dbal": "2.5.0",
+        "zendesk/zendesk_api_client_php": "^2.0",
+        "guzzlehttp/guzzle": "^6.2",
+        "php": ">=5.6.4",
+        "themsaid/laravel-routes-publisher": "^1.0",
+        "laravel/scout": "^1.1",
+        "tamayo/laravel-scout-elastic": "^1.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~5.0",
+        "phpspec/phpspec": "~2.1",
+        "itsgoingd/clockwork": "~1.7",
+        "symfony/dom-crawler": "3.1.*",
+        "symfony/css-selector": "3.1.*"
+    },
+    "autoload": {
+        "classmap": [
+            "database"
+        ],
+        "psr-4": {
+            "App\\": "app/"
+        },
+        "files": [
+            "app/Support/helpers.php"
+        ]
+    },
+    "autoload-dev": {
+        "classmap": [
+            "tests/TestCase.php"
+        ]
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "Illuminate\\Foundation\\ComposerScripts::postInstall",
+            "php artisan optimize"
+        ],
+        "post-update-cmd": [
+            "Illuminate\\Foundation\\ComposerScripts::postUpdate",
+            "php artisan optimize"
+        ],
+        "post-create-project-cmd": [
+            "php -r \"copy('.env.example', '.env');\"",
+            "php artisan key:generate"
+        ]
+    },
+    "config": {
+        "preferred-install": "dist"
+    }
+}

@@ -1,0 +1,61 @@
+/* Round SVG Icons */
+
+.svg-icon {
+  display: inline-block;
+  line-height: 0;
+  width: 120px;
+  * {
+    stroke: $font-body-color;
+  }
+  .fa {
+    font-size: 80px;
+  }
+}
+
+.svg-icon .fill {
+  * {
+    fill: $font-body-color;
+  }
+}
+
+.red,
+.blue,
+.purple {
+  .svg-icon * {
+    stroke: #ffffff;
+  }
+  .svg-icon .fill * {
+    fill: #ffffff;
+  }
+}
+
+
+#tick {
+  width: 80px;
+  height: 80px;
+  margin: 20px 0;
+}
+
+.tick-circ{
+    opacity: 0;
+    stroke-dasharray: 130;
+    stroke-dashoffset: 130;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -ms-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
+}
+.tick-tick{
+    stroke-dasharray: 50;
+    stroke-dashoffset: 50;
+    -webkit-transition: stroke-dashoffset 1s 0.5s ease-out;
+    -moz-transition: stroke-dashoffset 1s 0.5s ease-out;
+    -ms-transition: stroke-dashoffset 1s 0.5s ease-out;
+    -o-transition: stroke-dashoffset 1s 0.5s ease-out;
+    transition: stroke-dashoffset 1s 0.5s ease-out;
+}
+.drawn + svg .tick-path{
+    opacity: 1;
+    stroke-dashoffset: 0;
+}

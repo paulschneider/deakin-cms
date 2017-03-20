@@ -1,0 +1,172 @@
+// Theme
+// Bootstrap (Minus icons)
+// Core variables and mixins
+@import "../../vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/variables";
+
+// Theme
+@import "../../vendor/iconinc-admin-theme/src/SCSS/variables";
+
+// Overwrite Bootstrap vars
+$table-bg-hover: $light-blue;
+
+@import "../../vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/mixins";
+// Reset and dependencies
+@import "../../vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/normalize";
+@import "../../vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/print";
+// Core CSS
+@import "../../vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/scaffolding";
+@import "../../vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/type";
+// @import "../../vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/code";
+@import "../../vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/grid";
+@import "../../vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/tables";
+@import "../../vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/forms";
+@import "../../vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/buttons";
+// Components
+@import "../../vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/component-animations";
+@import "../../vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/dropdowns";
+@import "../../vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/button-groups";
+@import "../../vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/input-groups";
+@import "../../vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/navs";
+@import "../../vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/navbar";
+@import "../../vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/breadcrumbs";
+@import "../../vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/pagination";
+@import "../../vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/pager";
+@import "../../vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/labels";
+@import "../../vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/badges";
+//@import "../../vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/jumbotron";
+//@import "../../vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/thumbnails";
+@import "../../vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/alerts";
+@import "../../vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/progress-bars";
+@import "../../vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/media";
+@import "../../vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/list-group";
+@import "../../vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/panels";
+@import "../../vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/responsive-embed";
+//@import "../../vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/wells";
+@import "../../vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/close";
+// Components w/ JavaScript
+@import "../../vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/modals";
+@import "../../vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/tooltip";
+@import "../../vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/popovers";
+//@import "../../vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/carousel";
+// Utility classes
+@import "../../vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/utilities";
+@import "../../vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/responsive-utilities";
+
+@import "../responsive";
+
+// Overwrite admin vars
+$boxed-backgound: url("/assets/vendor/iconinc-admin-theme/dist/img/patterns/shattered.png");
+$nav-profil-pattern: url("/assets/vendor/iconinc-admin-theme/dist/img/patterns/header-profile.png") no-repeat;
+
+
+// Generic CSS imports.
+@import "../plugins/animate.scss";
+@import "../plugins/toastr.scss";
+@import "../plugins/datepicker3.scss";
+@import "../plugins/dataTables.bootstrap.scss";
+@import "../plugins/dataTables.responsive.scss";
+@import "../plugins/dataTables.tableTools.min.scss";
+
+
+// ADMIN THEME
+@import "../../vendor/iconinc-admin-theme/src/SCSS/typography";
+@import "../../vendor/iconinc-admin-theme/src/SCSS/navigation";
+@import "../../vendor/iconinc-admin-theme/src/SCSS/top_navigation";
+@import "../../vendor/iconinc-admin-theme/src/SCSS/buttons";
+@import "../../vendor/iconinc-admin-theme/src/SCSS/badgets_labels";
+@import "../../vendor/iconinc-admin-theme/src/SCSS/elements";
+@import "../../vendor/iconinc-admin-theme/src/SCSS/sidebar";
+@import "../../vendor/iconinc-admin-theme/src/SCSS/base";
+@import "../../vendor/iconinc-admin-theme/src/SCSS/pages";
+@import "../../vendor/iconinc-admin-theme/src/SCSS/chat";
+@import "../../vendor/iconinc-admin-theme/src/SCSS/spinners";
+
+// Skins
+@import "../../vendor/iconinc-admin-theme/src/SCSS/skins";
+
+
+// Media query style
+@import "../../vendor/iconinc-admin-theme/src/SCSS/media";
+
+@import "../../vendor/magnific-popup/src/css/_settings.scss";
+@import "../../vendor/magnific-popup/src/css/main.scss";
+
+// Custom
+@import "dropzone";
+@import "timepicker";
+@import "multiple-fields";
+@import "sections";
+@import "icons";
+@import "concertina";
+@import "related-links";
+@import "blocks";
+
+html, body {
+    height: 100%;
+}
+
+body.iframe {
+    background-color: #ffffff;
+}
+
+.form-group .cke_chrome {
+    border: 1px solid #eee;
+}
+
+.table-vertical {
+    tbody>tr>td {
+        vertical-align: middle;
+    }
+}
+
+.btn.nohover:hover {
+    /* here copy default .btn class styles */
+    cursor:default !important;
+    /* or something like that */
+}
+
+.toastr-alerts .alert {
+    display: none;
+}
+
+.jstree-open > .jstree-anchor > .fa-folder:before {
+    content: "\f07c";
+}
+
+.jstree-default .jstree-icon.none {
+    width: 0;
+}
+
+/* Fix for the breadcrumb separators */
+.breadcrumb > li + li:before {
+    content: "/";
+}
+
+/* Banner Selector */
+.banner-selector .banner-image {
+    width: 100%;
+    margin-top: 20px;
+}
+
+th.id-row {
+    min-width: 20px;
+}
+
+/* DataTable styles */
+.dataTables_filter input {
+    margin-left: 10px;
+}
+
+.dataTables_length select {
+    margin-right: 5px;
+}
+
+.dataTables_info {
+    display: inline-block;
+    float: left;
+}
+
+.icon-preview .fa {
+  font-family: FontAwesome !important;
+  font-size: 60px !important;
+}

@@ -1,0 +1,22 @@
+/**
+ * This file is included in external websites.
+ */
+
+@import "base";
+@import "mixins";
+
+.external-footer {
+    @import "../responsive";
+    @import "../../vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/variables";
+    @import "../../vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/mixins";
+    @import "../../vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/normalize";
+    @import "../../vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/scaffolding";
+    @import "../../vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/grid";
+    @import "../../vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/navs";
+    @import "../../vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/type";
+    @import "../../vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/utilities";
+    @import "typography";
+    @import "layout";
+
+    @include body-typography;
+}

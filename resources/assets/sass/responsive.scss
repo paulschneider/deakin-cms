@@ -1,0 +1,28 @@
+$screen-lg-min: 1200px;
+$screen-md-min: 992px;
+$screen-md-max: 1200px;
+$screen-sm-min: 768px;
+$screen-sm-max: 992px;
+$screen-xs-min: 320px;
+$screen-xs-max: 768px;
+
+@media (min-width: $screen-lg-min) {
+}
+
+@media (min-width: $screen-md-min) {
+}
+
+@media (min-width: $screen-sm-min) {
+}
+
+@media (min-width: $screen-xs-min) {
+}
+
+@media (max-width: $screen-md-max) {
+}
+
+@media (max-width: $screen-sm-max) {
+}
+
+@media (max-width: $screen-xs-max) {
+}

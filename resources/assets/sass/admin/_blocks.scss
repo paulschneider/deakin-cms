@@ -1,0 +1,23 @@
+.multiple-section.our-vital-signs, .section .our-vital-signs {
+
+    .cke_textarea_inline {
+        padding-top: 30%;
+    }
+
+    h2 {
+        color: #ffffff;
+    }
+    small {
+        font-size: 75px;
+        display: inline;
+    }
+
+    .widget-icon-link .icon-wrapper {
+        border-color: #ffffff;
+
+        svg * {
+            fill: #ffffff;
+            stroke: #ffffff;
+        }
+    }
+}

@@ -1,0 +1,23 @@
+.multiple-fields .related-row {
+    .select-icon {
+        position: absolute;
+        right: 53px;
+        padding: 6px 10px;
+    }
+
+    .svg {
+        vertical-align: top;
+        text-align: center;
+        padding: 0;
+
+        svg {
+            width: 30px;
+            margin: 0 auto;
+            vertical-align: middle;
+            position: relative;
+            margin-right: 15px;
+            stroke: $navy;
+            fill: $navy;
+        }
+    }
+}

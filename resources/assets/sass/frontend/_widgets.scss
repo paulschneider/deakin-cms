@@ -1,0 +1,75 @@
+.widget-icon-link {
+  font-family: "worldlybold", Arial, sans-serif;
+  a {
+    @include blue_btn();
+  }
+  .text,
+  .icon-wrapper {
+    display: inline-block;
+    vertical-align: middle;
+    opacity: 1;
+  }
+  &:hover .text,
+  &:hover .icon-wrapper {
+    opacity: .75;
+  }
+  .icon-wrapper {
+    opacity: 1;
+    svg {
+      position: relative;
+      top: -2px;
+      width: 30px;
+      margin-left: 15px;
+    }
+    svg * {
+      fill: $color-blue;
+      stroke: $color-blue;
+    }
+  }
+}
+
+.icon-wrapper.time {
+  padding: 17px 19px 17px 15px;
+}
+
+.red,
+.blue,
+.purple {
+  .widget-icon-link .icon-wrapper {
+    border-color: #ffffff;
+    svg * {
+      fill: #ffffff;
+      stroke: #ffffff;
+    }
+  }
+}
+
+
+/* Action Links Widget */
+
+.action-button a {
+  border: 2px solid #ffffff;
+  display: block;
+  text-align: center;
+  padding: 15px 0;
+  border-radius: 5px;
+}
+
+.action-button.action-bottom {
+  position: absolute;
+  left: 54px;
+  right: 54px;
+  bottom: 40px;
+}
+
+.one-column-centered-wysiwyg .action-button,
+.one-column-wysiwyg .action-button {
+  text-align: center;
+  a {
+    display: inline-block;
+    padding: 15px 30px;
+    min-width: 50%;
+    margin: 0 auto;
+    text-align: center;
+  }
+}

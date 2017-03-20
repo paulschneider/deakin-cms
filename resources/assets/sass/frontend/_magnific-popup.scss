@@ -1,0 +1,174 @@
+/* magnific customisations */
+.mfp-wrap {
+  z-index: 17000002 !important; // zendesk is crazy. get above it.
+}
+.mfp-open {
+  .mfp-iframe-holder {
+    .mfp-content {
+      max-width: 960px;
+      &.browse-credential-popup {
+        max-width: 1200px;
+        .mfp-close {
+          background-image: url('/assets/images/close-btn.png');
+          background-repeat: no-repeat;
+          font-size: 0;
+          margin: 15px;
+          right: 0;
+        }
+      }
+    }
+    .mfp-close {
+      background-color: transparent;
+      font-size: 35px;
+      padding-top: 5px;
+
+      &.mfp-close-dark {
+        color: #333;
+      }
+    }
+  }
+  .block-form {
+    margin: 0;
+  }
+  .submit-btn-container {
+    &:after {
+      top: 14px !important;
+      margin-left: 135px !important;
+    }
+  }
+  .alert .close {
+    display: none;
+  }
+}
+
+.mfp-iframe-holder {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.mfp-iframe-holder,
+.mfp-wistia {
+  .mfp-close {
+    top: 0;
+    right: -47px;
+    background-color: $color-red;
+    display: inline-block;
+    width: auto;
+    padding: 0px 15px;
+    height: auto;
+  }
+}
+
+.browse-credential-popup {
+    .mfp-close {
+      width: 30px;
+      height: 40px;
+    }
+}
+
+.mfp-iframe {
+  padding: 0 !important;
+  height: 100%;
+}
+
+.mfp-iframe-holder .mfp-large {
+  .mfp-iframe-scaler {
+    padding-top: 90%;
+    .mfp-iframe {
+      padding: $padding-large 0;
+      background-color: #ffffff;
+    }
+  }
+  .mfp-close {
+    right: 0;
+    @media (max-height: 900px) {
+      right: 15px;
+    }
+  }
+}
+
+.wistia_video_foam_dummy {
+  max-width: 850px;
+}
+
+.wistia-embed-hidden {
+  opacity: 0;
+}
+
+.mfp-wistia {
+  max-width: 850px;
+  .mfp-close {
+    color: #ffffff;
+    right: -23px;
+  }
+}
+
+body.iframe {
+  height: 100%;
+  padding: 0;
+  .block-form {
+    margin: 0;
+  }
+}
+
+@media (max-width: $screen-xs-max) {
+
+  body.iframe, html.mfp-open {
+    height: 100%;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .mfp-container {
+    padding: 0;
+  }
+  .mfp-container .mfp-iframe-scaler iframe {
+    padding-top: 0;
+  }
+  .mfp-content {
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+  }
+  .mfp-iframe-scaler iframe {
+    padding-top: 20px;
+    background-color: #ffffff;
+  }
+  .mfp-iframe-holder .mfp-close,
+  .mfp-wistia .mfp-close {
+    top: 0;
+    right: 0;
+  }
+  .mfp-iframe {
+    padding: 0 !important;
+    height: 100%;
+  }
+  .mfp-wistia {
+    padding-top: 44px;
+  }
+  html.mfp-open {
+    .section-thankyou {
+      .sections > div {
+        background-color: $color-credible;
+        color: white;
+        padding: 38px 20px 20px;
+      }
+    }
+  }
+  body.mfp-open {
+    position: relative;
+  }
+  body.iframe {
+
+  }
+  body.mfp-open {
+    //overflow: hidden;
+    position: relative;
+
+    -webkit-transform: translateZ(0);
+  }
+  html.browse-credential-popup,
+  body.browse-credential-popup {
+    //overflow: auto;
+  }
+}

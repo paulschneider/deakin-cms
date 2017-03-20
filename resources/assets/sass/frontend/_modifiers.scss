@@ -1,0 +1,35 @@
+/**
+ * All generic modifiers that can be used anywhere
+ */
+
+.transparent {
+    opacity: 0;
+}
+
+@media (min-width: $screen-lg-min) {
+    .invisible-lg {
+        visibility: hidden;
+    }
+}
+
+@media (min-width: $screen-md-min) {
+    .invisible-md {
+        visibility: hidden;
+    }
+}
+
+@media (max-width: $screen-sm-max) {
+    .container-mobile-no-padding {
+        padding: 0;
+    }
+
+    .invisible-sm {
+        visibility: hidden;
+    }
+}
+
+@media (max-width: $screen-xs-max) {
+    .invisible-xs {
+        visibility: hidden;
+    }
+}

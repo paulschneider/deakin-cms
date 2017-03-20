@@ -1,0 +1,103 @@
+.concertina {
+  $concertina-height: 45px;
+  border-top: 2px solid $color-credible;
+
+  background-color: #fff;
+  color: $font-body-color;
+
+  position: relative;
+  margin-bottom: -1px;
+
+  @media (max-width: $screen-sm) {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  .concertina-title {
+    color: $color-blue;
+  }
+  .header {
+    position: relative;
+    @include hoverable($color-credible, white);
+    &:hover {
+      .concertina-title {
+        color: white;
+      }
+    }
+    h2 {
+      margin: 0;
+      font-size: $font-size-h4;
+      font-family: 'worldlylight';
+      padding: 14px 15px 12px 40px;
+    }
+    .actions {
+      //position: absolute;
+    }
+    .open-content,
+    .close-content {
+      position: absolute;
+      left: 13px;
+      top: 8px;
+      color: $color-blue;
+      font-size: 0;
+      &:after {
+        content: "\f107";
+        font-family: FontAwesome;
+        font-size: $font-size-h3;
+        display: inline-block;
+      }
+    }
+    .close-content {
+      display: none;
+      &:after {
+        content: "\f106";
+      }
+    }
+  }
+  .detail {
+    padding: $line-height-computed 40px;
+    @media (max-width: $screen-sm) {
+      padding: $line-height-computed 15px;
+    }
+    display: none;
+    border-bottom: none;
+  }
+  /* Once the content are opened */
+  &.open {
+    .header {
+      .close-content {
+        display: block;
+      }
+      .open-content {
+        display: none;
+      }
+    }
+    .detail {
+      display: block;
+    }
+    .close-content {
+      color: $font-body-color;
+    }
+  }
+}
+
+
+.concertina + h2,
+.concertina + h3,
+.concertina + h4,
+.concertina + p,
+.concertina + ol,
+.concertina + ul,
+.concertina + table {
+  margin-top: $line-height-computed;
+}
+
+h2 + .concertina,
+h3 + .concertina,
+h4 + .concertina,
+p + .concertina,
+ol + .concertina,
+ul + .concertina,
+table + .concertina {
+  margin-top: $line-height-computed;
+}

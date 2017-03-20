@@ -1,0 +1,30 @@
+// min-widths
+// from smallest to largest so the cascade is correct
+// these are the sizes defined by bootstrap
+// add any other sizes not defined here
+$min-widths: $screen-xs-min $screen-sm-min $screen-md-min $screen-lg-min;
+// max-widths
+// from largest to smallest so the cascade is correct
+// these are the sizes defined by bootstrap
+// add any other sizes not defined here
+$max-widths: $screen-md-max $screen-sm-max $screen-xs-max;
+
+@each $width in $min-widths {
+  @media(min-width: $width) {
+    // to kick it off we need a rule in the query
+    // this is harmless and also useful if debugging desired
+    .debug-media-size:after {
+      content: "min-width: #{$width}";
+    }
+  }
+}
+
+@each $width in $max-widths {
+  @media(min-width: $width) {
+    // to kick it off we need a rule in the query
+    // this is harmless and also useful if debugging desired
+    .debug-media-size:after {
+      content: "max-width: #{$width}";
+    }
+  }
+}
